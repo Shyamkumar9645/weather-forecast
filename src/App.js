@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import Weather from './component/Weather';
+import Weather from './components/Weather';
 import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
