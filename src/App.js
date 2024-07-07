@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import Weather from './components/Weather';
+import styled, { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+  }
+`;
+
+const AppContainer = styled.div`
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React Js
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <AppContainer>
+            <GlobalStyle />
+            <Weather />
+        </AppContainer>
+    );
 }
 
 export default App;
